@@ -150,6 +150,7 @@ func ociIndex(m []types.Manifest) ocispec.Index {
 		Versioned: specs.Versioned{
 			SchemaVersion: 2,
 		},
+		MediaType: "application/vnd.oci.image.index.v1+json",
 	}
 	for _, man := range m {
 		index.Manifests = append(index.Manifests, man.Descriptor)
